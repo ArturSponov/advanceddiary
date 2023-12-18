@@ -1,0 +1,1378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .header {
+            width: 100%;
+            height: 180px;
+        background: white;
+            border-bottom: black 2px solid;
+            border-radius: 0 0 15px 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-direction: row;
+            flex-wrap: nowrap;
+        
+        }
+        .logo{
+            width: 20%;
+            height: 150px;
+    background-color: white;
+            backdrop-filter: blur(8px);
+
+            border-radius: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-direction: column;
+            margin-left: 10px;
+            border: black 2px solid;
+        }
+        .geometric {
+            width: 85%;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('/semi-truck.gif');
+    background-size: 45%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: transparent;
+
+    border-bottom: royalblue 2px solid;
+    margin-top: 23px;
+
+        }
+        .logo:hover .geometric {
+            width: 85%;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-size: 49%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: transparent;
+
+    border-bottom: royalblue 2px solid;
+
+        }
+        .onegeometric {
+            width: 100%;
+            height: 65px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: row;
+    flex-wrap: wrap;
+        }
+        .square {
+            width: 25px;
+            height: 40px;
+            background-color: bisque;
+            border-radius: 22px 5px 5px 5px;
+
+        }
+        .square2 {
+            width: 112px;
+            height: 40px;
+            background-color: bisque;
+            border-radius: 3px 3px 3px 3px;
+            margin-left: 5px;
+        }
+        .twogeometric {
+            width: 100%;
+            height: 35px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: row;
+        }
+        .onecircle {
+                   width: 21px;
+    height: 21px;
+    border-radius: 100%;
+    background-color: bisque;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 9px;
+    margin-right: -7px;
+        }
+        .twocircle {
+           width: 21px;
+    height: 21px;
+    border-radius: 100%;
+    background-color: bisque;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 61px;
+    /* left: 33px; */
+    margin-bottom: 9px;
+        }
+        .blackcircle {
+            width: 13px;
+            height: 13px;
+            border-radius: 100%;
+            background-color: black;
+        }
+        body {
+            margin: 0;
+            height: 882px;
+
+            overflow-x: hidden;
+
+        }
+        .logotext {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-size: 17px;
+            font-weight: 700;
+            color: royalblue;
+            margin-right: 5px;
+            border-right: grey 3px solid;
+            width: 60px;
+        }
+        .logotext2 {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-size: 17px;
+            font-weight: 700;
+            color: grey;
+        }
+        .texts {
+            width: 50%;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: row;
+            flex-wrap: nowrap;
+        }
+        .threecircle {
+            width: 21px;
+    height: 21px;
+    border-radius: 100%;
+    background-color: bisque;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 9px;
+    margin-left: 11px;
+        }
+    .mainlogo {
+        width: 75%;
+        height: 40px;
+        background-image: url('/logo-2.png');
+        background-size: 100%;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    .uls {
+            width: 60%;
+    height: 700px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    }
+    .samul {
+        width: 100%;
+        height: 700px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-direction: column;
+        list-style-type: none;
+    }
+.lis1 {
+    width: 90%;
+    height: 145px;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    border-radius: 10px;
+    border: grey 2px solid;
+    overflow: visible; /* Добавлено overflow */
+    position: relative; /* Добавлено position */
+    transition: all 0.5s ease-in-out;
+    cursor: pointer;
+    margin-top: 5px;
+    background-color: white;
+}
+
+.lis1:hover {
+    border: royalblue 2px solid;
+    border-radius: 15px;
+}
+.lis1:hover .samtext1 {
+    color: royalblue;
+}
+
+.imagelis1 {
+       width: 75%;
+    height: 88px;
+    background-image: url(/enginepng.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 44%;
+    position: absolute;
+    bottom: 43px;
+}
+
+{{!-- .lis1:hover .imagelis1 {
+    margin-bottom: 25px;
+    transition: all 0.5s ease-in-out;
+    background-size: 70%;
+    background-image: url('/enginepng.png');
+} --}}
+.lis1:hover .imagelis1 {
+    
+    background-size: 55%;
+    background-image: url('/engine.gif');
+}
+
+
+
+
+
+    .samtext1 {
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+        font-size: 19px;
+        font-weight: 700;
+        color: grey;
+        transition: all 0.5s ease-in-out;
+    }
+    .lis2 {
+    width: 90%;
+    height: 145px;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    border-radius: 10px;
+    border: grey 2px solid;
+    overflow: visible; /* Добавлено overflow */
+    position: relative; /* Добавлено position */
+    transition: all 0.5s ease-in-out;
+    cursor: pointer;
+    margin-top: 5px;
+    background-color: white;
+
+}
+.lis2:hover .samtext2 {
+    color: royalblue;
+}
+.lis2:hover {
+    border: royalblue 2px solid;
+    border-radius: 15px;
+}
+.samtext2 {
+    color: grey;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 19px;
+    font-weight: 700;
+    transition: all 0.5s ease-in-out;
+}
+.imagelis2 {
+        width: 75%;
+    height: 88px;
+    background-image: url(/wheelpng.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 44%;
+    position: absolute;
+    bottom: 43px;
+}
+.lis2:hover .imagelis2 {
+    background-image: url('/wheel.gif');
+    background-size: 58%;
+}
+.lis5 {
+        width: 90%;
+    height: 145px;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    border-radius: 10px;
+    border: grey 2px solid;
+    overflow: visible; /* Добавлено overflow */
+    position: relative; /* Добавлено position */
+    transition: all 0.5s ease-in-out;
+    cursor: pointer;
+    margin-top: 5px;
+    background-color: white;
+
+    }
+.lis5:hover .samtext5 {
+    color: royalblue;
+}
+.lis5:hover {
+    border: royalblue 2px solid;
+    border-radius: 15px;
+}
+.samtext5 {
+    color: grey;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 19px;
+    font-weight: 700;
+    transition: all 0.5s ease-in-out;
+}
+.imagelis5 {
+        width: 75%;
+    height: 88px;
+    background-image: url('/callpng.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 44%;
+    position: absolute;
+    bottom: 43px;
+}
+.lis5:hover .imagelis5 {
+    background-image: url('/callgif.gif');
+    background-size: 57%;
+}
+    {{!-- .lis4 {
+        width: 18%;
+        height: 145px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        border-radius: 15px;
+        border: grey 2px solid;
+    } --}}
+        .lis4 {
+    width: 90%;
+    height: 145px;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    border-radius: 10px;
+    border: grey 2px solid;
+    overflow: visible; /* Добавлено overflow */
+    position: relative; /* Добавлено position */
+    transition: all 0.5s ease-in-out;
+    cursor: pointer;
+    margin-top: 5px;
+    background-color: white;
+
+}
+.lis2:hover .samtext4 {
+    color: royalblue;
+}
+body
+.lis4:hover {
+    border: royalblue 2px solid;
+    border-radius: 15px;
+}
+.samtext4 {
+    color: grey;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 19px;
+    font-weight: 700;
+    transition: all 0.5s ease-in-out;
+}
+.imagelis4 {
+        width: 75%;
+    height: 88px;
+    background-image: url(/handshakepng.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 44%;
+    position: absolute;
+    bottom: 43px;
+}
+.lis4:hover .imagelis4 {
+    background-image: url('/handshakegif.gif');
+    background-size: 50%;
+}
+    {{!-- .lis3 {
+        width: 18%;
+        height: 145px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        border-radius: 15px;
+        border: grey 2px solid;
+    } --}}
+        .lis3 {
+    width: 90%;
+    height: 145px;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    border-radius: 10px;
+    border: grey 2px solid;
+    overflow: visible; /* Добавлено overflow */
+    position: relative; /* Добавлено position */
+    transition: all 0.5s ease-in-out;
+    cursor: pointer;
+    margin-top: 5px;
+    background-color: white;
+
+}
+.lis3:hover .samtext3 {
+    color: royalblue;
+}
+.lis3:hover {
+    border: royalblue 2px solid;
+    border-radius: 15px;
+}
+.samtext3 {
+    color: grey;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 17px;
+    font-weight: 900;
+    transition: all 0.5s ease-in-out;
+}
+.imagelis3 {
+        width: 75%;
+    height: 88px;
+    background-image: url(/wrenchpng.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 44%;
+    position: absolute;
+    bottom: 43px;
+    z-index: 1;
+}
+.lis3:hover .imagelis3 {
+    background-image: url('/wrenchgif.gif');
+    background-size: 50%;
+    z-index: 1;
+}
+.lis1:hover ~ .lis2:not(.lis1) {
+    filter: blur(2px);
+}
+.lis1:hover ~ .lis3:not(.lis1) {
+    filter: blur(2px);
+}
+.lis1:hover ~ .lis4:not(.lis1) {
+    filter: blur(2px);
+}
+
+
+.lis {
+            transition: filter 0.3s ease-in-out;
+        }
+
+        .blurred {
+            filter: blur(2px);
+        }
+
+
+
+
+
+
+
+
+
+    
+.glavul{
+        width: 500px;
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 800px;
+        right: -50%;
+        top: 0;
+        transition: all 0.3s ease-in-out;
+    }
+    .glavuls {
+        width: 500px;
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 800px;
+        right: 0%;
+        top: 0;
+        background-color: white;
+    border-radius: 10px;
+    box-shadow: -3px 1px 10px black;
+    transition: all 0.3s ease-in-out;
+    }
+    
+    
+    .exit {
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-size: 22px;
+        font-weight: 700;
+        color: black;
+        transition: all 0.3s ease-in-out;
+    }
+    
+    .textareas {
+        display: block;
+position: absolute;
+        left: 15px;
+        top: 50px;
+
+        width: 100px;
+        height: 100px;
+    }
+    .secondheader {
+        width: 500px;
+        height: 150px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: row;
+        flex-wrap: nowrap;
+
+    }
+    .kakdela {
+        text-decoration: none;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-size: 17px;
+    color: white;
+    display: none;
+    font-weight: 700;
+    }
+    .whatsapp:hover {
+        width: 100px;
+        height: 50px;
+        background: green;
+        border: black 2px solid;
+        border-radius: 15px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .whatsapp:hover .kakdela {
+        display: block;
+    }
+    .whatsapp {
+        width: 50px;
+        height: 50px;
+        border: black 2px solid;
+        border-radius: 100%;
+        background-image: url('/whatsapp.png');
+        background-size: 100%;
+        background-repeat: no-repeat;
+        background-position: center;
+        transition: all 0.2s ease-in-out;
+    }
+    .instagramm {
+        width: 50px;
+        height: 50px;
+        border: black 2px solid;
+        border-radius: 100%;
+        background-image: url('/instagram.png');
+        background-size: 100%;
+        background-repeat: no-repeat;
+        background-position: center;
+        transition: all 0.2s ease-in-out;
+        cursor: pointer;
+    }
+    .kakdela2 {
+        text-decoration: none;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-size: 17px;
+    color: white;
+    display: none;
+    font-weight: 700;
+    }
+    .instagramm:hover .kakdela2 {
+        display: block;
+    }
+    .instagramm:hover {
+        width: 100px;
+        height: 50px;
+        background: linear-gradient(157deg, rgba(141,0,255,1) 30%, rgba(242,159,4,1) 100%);
+        border: black 2px solid;
+        border-radius: 15px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .icons {
+        width: 190px;
+        height: 150px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-direction: column;
+    }
+    .languages {
+        width: 210px;
+        height: 150px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-direction: column;
+    }
+    .english {
+        width: 190px;
+        height: 45px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: royalblue;
+        border-radius: 10px;
+        border: black 2px solid;
+        color: white;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-size: 18px;
+        font-weight: 700;
+        transition: all 0.3s ease-in-out;
+        cursor: pointer;
+    }
+    .russian {
+        width: 190px;
+        height: 45px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: royalblue;
+        border-radius: 10px;
+        border: black 2px solid;
+        color: white;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-size: 18px;
+        font-weight: 700;
+        transition: all 0.3s ease-in-out;
+        cursor: pointer;
+    }
+    .russian:hover {
+        background-color: royalblue;
+        border-radius: 15px;
+        border: grey 2px solid;
+        color: white;
+        font-size: 15px;
+        margin-bottom: 5px;
+       box-shadow: -6px 5px 8px 0px rgba(0, 40, 255, 0.39);
+    }
+    .english:hover {
+        background-color: royalblue;
+        border-radius: 15px;
+        border: grey 2px solid;
+        color: white;
+        font-size: 15px;
+      box-shadow: -6px 5px 8px 0px rgba(0, 40, 255, 0.39);
+        margin-bottom: 5px;
+
+    }
+    .opentext {
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-size: 18px;
+        font-weight: 700;
+        display: block;
+    }
+    .opentexts {
+        display: none;
+    }
+    .first {
+        width: 100%;
+        height: 600px;
+        background-color: orange;
+    }
+    .krascircle {
+            background: linear-gradient(157deg, rgba(70,196,252,1) 30%, rgba(4,21,242,1) 100%);
+    width: 300px;
+    height: 300px;
+    border-radius: 100%;
+    position: absolute;
+    left: 1286px;
+    top: 322px;
+    0px: ;
+    transform: rotate3d(1, 1, 1, 160deg);
+    }
+    .second {
+        width: 100%;
+        height: 1000px;
+        background-color: purple;
+    }
+         .first {
+    width: 100%;
+    height: 1000px;
+    background: #ccc;
+}
+
+
+/* .panel {
+    width: 50px;
+    height: 50px;
+    background-color: white;
+display: block;
+    position: relative;
+    margin: auto;
+    border: #999 2px solid;
+    border-radius: 5px;
+    transition: all 0.5s ease-in-out;
+
+} */
+.panel {
+        position: relative;
+        border-radius: 5px;
+        width: 50px;
+        height: 50px;
+        margin-right: 5px;
+        display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    }
+/*.fixedpanel {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    background-color: grey;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    top: 100px;
+    left: 1150px;
+    z-index: 1;
+} */
+
+.panels {
+    position: absolute;
+    border-radius: 5px;
+    width: 50px;
+    height: 91px;
+    margin-right: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    left: 1043px;
+    top: 0px;
+    z-index: 1;
+}
+.inner {
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    background-color: black;
+    border-radius: 5px;
+    top: 49%;
+    left: 0;
+    transition: all 0.5s ease-in-out;
+}
+.inner::after {
+        position: absolute;
+    width: 100%;
+    height: 4px;
+    background-color: black;
+    border-radius: 5px;
+    top: -8px;
+    left: 0;
+    content: '';
+    transition: all 0.5s ease-in-out;
+
+}
+.inner::before {
+        position: absolute;
+    width: 100%;
+    height: 4px;
+    background-color: black;
+    border-radius: 5px;
+    top: 8px;
+    left: 0;
+    transition: all 0.5s ease-in-out;
+    
+    content: '';
+}
+.panel:hover .inner  {
+    background-color: grey;
+    transition: all 0.2s ease-in-out;
+}
+.panel:hover .inner::after {
+     background-color: grey;
+    transition: all 0.2s ease-in-out;
+}
+.panel:hover .inner::before {
+     background-color: grey;
+    transition: all 0.2s ease-in-out;
+}
+.panel:hover .opentext {
+    color: grey;
+    transition: all 0.3s ease-in-out;
+}
+.panels:hover .exit {
+    color: grey !important;
+    transition: all 0.3s ease-in-out !important;
+}
+
+.panels:hover .inners  {
+    background-color: grey;
+    transition: all 0.2s ease-in-out;
+}
+.panels:hover .inners::after {
+     background-color: grey;
+    transition: all 0.2s ease-in-out;
+}
+.panels:hover .inners::before {
+     background-color: grey;
+    transition: all 0.2s ease-in-out;
+}
+
+
+
+.inners {
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    background-color: black;
+    border-radius: 5px;
+    top: 49%;
+    left: 0;
+    transition: all 0.5s ease-in-out;
+
+}
+.inners::after {
+        position: absolute;
+    width: 50%;
+    height: 4px;
+    background-color: black;
+    border-radius: 5px;
+    top: -8px;
+    left: 0;
+    content: '';
+    transform: rotate(147deg);
+    transition: all 0.5s ease-in-out;
+}
+.inners::before {
+        position: absolute;
+    width: 50%;
+    height: 4px;
+    background-color: black;
+    border-radius: 5px;
+    top: 8px;
+    left: 0;
+    content: '';
+    transform: rotate(31deg);
+    transition: all 0.5s ease-in-out;
+
+}
+.textsicons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    width: 90%;
+    height: 60px;
+
+}
+.iconki {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+    width: 90%;
+    height: 80px;
+}
+.samtexticon {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 19px;
+    font-weight: 700;
+    color: black;
+}
+.first {
+    width: 100%;
+    height: 700px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    background-color: royalblue;
+}
+.hall {
+    backdrop-filter: blur(1px);
+    width: 45%;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 15px;
+    background-color: white ;
+}
+.ideas {
+    color: black;
+    font-size: 24px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 700;
+}
+.forms {
+    width: 45%;
+    height: 350px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+.forma {
+    width: 100%;
+    height: 330px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+.textInputWrapper {
+  position: relative;
+  width: 70%;
+  margin: 12px 5px;
+  --accent-color: #a3e583;
+}
+
+.textInputWrapper:before {
+  transition: border-bottom-color 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.42);
+}
+
+.textInputWrapper:before,
+.textInputWrapper:after {
+  content: "";
+  left: 0;
+  right: 0;
+  position: absolute;
+  pointer-events: none;
+  bottom: -1px;
+  z-index: 4;
+  width: 100%;
+}
+
+.textInputWrapper:focus-within:before {
+  border-bottom: 1px solid var(--accent-color);
+}
+
+.textInputWrapper:before {
+  transition: border-bottom-color 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.42);
+}
+
+.textInputWrapper:focus-within:before {
+  border-bottom: 1px solid var(--accent-color);
+  transform: scaleX(1);
+}
+
+.textInputWrapper:focus-within:after {
+  border-bottom: 2px solid var(--accent-color);
+  transform: scaleX(1);
+}
+
+.textInputWrapper:after {
+  content: "";
+  transform: scaleX(0);
+  transition: transform 250ms cubic-bezier(0, 0, 0.2, 1) 0ms;
+  will-change: transform;
+  border-bottom: 2px solid var(--accent-color);
+  border-bottom-color: var(--accent-color);
+}
+
+.textInput::placeholder {
+  transition: opacity 250ms cubic-bezier(0, 0, 0.2, 1) 0ms;
+  opacity: 1;
+  user-select: none;
+  color: rgba(255, 255, 255, 0.582);
+}
+
+.textInputWrapper .textInput {
+  border-radius: 5px 5px 0px 0px;
+  box-shadow: 0px 2px 5px rgb(35 35 35 / 30%);
+  max-height: 36px;
+  background-color: #252525;
+  transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition-duration: 200ms;
+  transition-property: background-color;
+  color: #e8e8e8;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 12px;
+  width: 100%;
+  border-left: none;
+  border-bottom: none;
+  border-right: none;
+}
+
+.textInputWrapper .textInput:focus,
+.textInputWrapper .textInput:active {
+  outline: none;
+}
+
+.textInputWrapper:focus-within .textInput,
+.textInputWrapper .textInput:focus,
+.textInputWrapper .textInput:active {
+  background-color: #353535;
+}
+
+.textInputWrapper:focus-within .textInput::placeholder {
+  opacity: 0;
+}
+.textInputWrapper1 {
+  position: relative;
+  width: 70%;
+  margin: 12px 5px;
+  --accent-color: #a3e583;
+}
+
+.textInputWrapper1:before {
+  transition: border-bottom-color 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.42);
+}
+
+.textInputWrapper1:before,
+.textInputWrapper1:after {
+  content: "";
+  left: 0;
+  right: 0;
+  position: absolute;
+  pointer-events: none;
+  bottom: -1px;
+  z-index: 4;
+  width: 100%;
+}
+
+.textInputWrapper1:focus-within:before {
+  border-bottom: 1px solid var(--accent-color);
+}
+
+.textInputWrapper1:before {
+  transition: border-bottom-color 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.42);
+}
+
+.textInputWrapper1:focus-within:before {
+  border-bottom: 1px solid var(--accent-color);
+  transform: scaleX(1);
+}
+
+.textInputWrapper1:focus-within:after {
+  border-bottom: 2px solid var(--accent-color);
+  transform: scaleX(1);
+}
+
+.textInputWrapper1:after {
+  content: "";
+  transform: scaleX(0);
+  transition: transform 250ms cubic-bezier(0, 0, 0.2, 1) 0ms;
+  will-change: transform;
+  border-bottom: 2px solid var(--accent-color);
+  border-bottom-color: var(--accent-color);
+}
+
+.textInput1::placeholder {
+  transition: opacity 250ms cubic-bezier(0, 0, 0.2, 1) 0ms;
+  opacity: 1;
+  user-select: none;
+  color: rgba(255, 255, 255, 0.582);
+}
+
+.textInputWrapper1 .textInput1 {
+  border-radius: 5px 5px 0px 0px;
+  box-shadow: 0px 2px 5px rgb(35 35 35 / 30%);
+  max-height: 36px;
+  background-color: #252525;
+  transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition-duration: 200ms;
+  transition-property: background-color;
+  color: #e8e8e8;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 12px;
+  width: 100%;
+  border-left: none;
+  border-bottom: none;
+  border-right: none;
+}
+
+.textInputWrapper1 .textInput1:focus,
+.textInputWrapper1 .textInput1:active {
+  outline: none;
+}
+
+.textInputWrapper1:focus-within .textInput1,
+.textInputWrapper1 .textInput1:focus,
+.textInputWrapper1 .textInput1:active {
+  background-color: #353535;
+}
+
+.textInputWrapper1:focus-within .textInput1::placeholder {
+  opacity: 0;
+}
+.inhall {
+    width: 95%;
+    height: 320px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: row;
+position: relative;
+    margin-bottom: 10px;
+}
+.inhall::before {
+    content: '';
+    width: 3px;
+    height: 290px;
+    background-color: grey;
+    border-radius: 2px;
+    position: absolute;
+    left: 50%;
+    top: 0;
+}
+.images {
+    width: 45%;
+    height: 300px;
+    background-image: url('/notelist.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-right: 10px;
+}
+.buttons {
+    width: 80%;
+    height: 50px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: row;
+}
+.submits {
+    width: 45%;
+    border: greenyellow 4px solid;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 17px;
+    font-weight: 700;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+.resets {
+   width: 45%;
+    border:crimson  4px solid;
+cursor: pointer;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 17px;
+    font-weight: 700;
+    border-radius: 15px; 
+    transition: all 0.3s ease-in-out;
+
+}
+.submits:hover {
+    background-color: greenyellow;
+    color: white;
+    border-radius: 9px;
+}
+.resets:hover {
+    background-color: crimson;
+    border-radius: 9px;
+    color: white;
+}
+.messages {
+    border: royalblue 3px solid;
+    width: 260px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    position: absolute;
+    z-index: 1;
+    left: 45px;
+    top: 0px;
+}
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <div class="geometric">
+                
+                    </div>
+                    <div class="texts">
+        <div class="mainlogo"></div>
+    </div>
+    </div>
+    <div class="secondheader">
+        <div class="icons">
+            <div class="textsicons">
+                <p class="samtexticon">Социальные сети</p>
+            </div>
+            <div class="iconki">
+            <div class="whatsapp">
+                <a href="https://api.whatsapp.com/send/?phone=996508109109&text&type=phone_number&app_absent=0" class="kakdela">WhatsApp</a>
+            </div>
+            <div class="instagramm">
+                <a href="https://www.instagram.com/truckparts_kg/" class="kakdela2">Instagram</a>
+            </div>
+            </div>
+        </div>
+        <div class="languages">
+            <div class="english">ENGLISH</div>
+            <div class="russian">РУССКИЙ</div>
+        </div>
+        
+<div class="panel">
+    <div class="inner"></div>
+    <br>
+
+    <p class="opentext">Меню</p>
+</div>
+    </div>
+
+
+          
+    <div class="glavul">
+        <div class="textareas">
+        <p class="exit">Закрыть меню</p>
+        </div>
+    <div class="uls">
+        <ul class="samul">
+            <li class="lis lis1">
+                <div class="imagelis1"></div>
+                <div class="textlis1">
+                    <p class="samtext1">О нас</p>
+                </div>
+            </li>
+            <li class="lis lis2">
+                <div class="imagelis2"></div>
+                <div class="textlis2">
+                    <p class="samtext2">Ассортимент</p>
+                </div>
+            </li>
+            <li class="lis lis3">
+                <div class="imagelis3"></div>
+                <div class="textlis3">
+                    <p class="samtext3">Сервис и ремонт</p>
+                </div>
+            </li>
+            <li class="lis lis4">
+                <div class="imagelis4"></div>
+                <div class="textlis4">
+                    <p class="samtext4">Партнеры</p>
+                </div>
+            </li>
+            <li class="lis lis5">
+                <div class="imagelis5"></div>
+                <div class="textlis5">
+                    <p class="samtext5">Контакты</p>
+                </div>
+            </li>
+        </ul>
+    </div> 
+    </div> 
+    
+    </header>
+    <div class="first">
+        <div class="hall">
+            <p class="ideas">Предложения</p>
+            <div class="inhall">
+            <div class="forms">
+                {{#if Visible}}
+                <p class="messages">{{messagge}}</p>
+                {{/if}}
+            <form action="/feedback/add" method="post" class="forma">
+            <div class="textInputWrapper">
+    <input placeholder="Заголовок" type="text" class="textInput" name="Title">
+</div>
+            <div class="textInputWrapper1">
+    <input placeholder="Описание" type="text" class="textInput1" name="Option">
+</div>
+<div class="buttons">
+    <button type="submit" class="submits">Отправить</button>
+    <button type="reset" class="resets">Стереть</button>
+</div>
+            </form>
+            </div>
+            <div class="images"></div>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const lisElements = document.querySelectorAll('.lis');
+        const openpanel = document.querySelector('.openpanel')
+        const onecenter = document.querySelector('.onecenter')
+        const threecenter = document.querySelector('.threecenter')
+        let glavul = document.querySelector('.glavul')
+        let opentext = document.querySelector('.opentext')
+        let inner = document.querySelector('.inner')
+    let panel = document.querySelector('.panel')
+    
+        
+
+        lisElements.forEach(element => {
+            element.addEventListener('mouseover', () => {
+                lisElements.forEach(otherElement => {
+                    if (otherElement !== element) {
+                        otherElement.classList.add('blurred');
+                    }
+                });
+            });
+
+            element.addEventListener('mouseout', () => {
+                lisElements.forEach(otherElement => {
+                    otherElement.classList.remove('blurred');
+                });
+            });
+        });
+        panel.addEventListener('click', function (e) {
+        inner.classList.toggle('inners')
+            glavul.classList.toggle('glavuls')
+            opentext.classList.toggle('opentexts')
+            panel.classList.toggle('panels')
+            const panels = document.querySelector('.panels');
+    const exit = document.querySelector('.exit');
+            if (panels && exit) {
+        panels.addEventListener('mouseover', function () {
+            exit.style.color = 'grey';
+        });
+
+        panels.addEventListener('mouseout', function () {
+            exit.style.color = 'black'; // или любой другой цвет по умолчанию
+        });
+    }
+    
+});
+        })
+    </script>
+</body>
+</html>
