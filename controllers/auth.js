@@ -83,11 +83,7 @@ module.exports.homework =  async function (req, res) {
     // const db = mongoClient.db("Users");
     const collection = await Homeworks.find({});
     // const result = Homeworks
-        const uniqueNames = [];
-        const uniqueObjects = [];
-        const userId = []   
 
-       console.log('sdasd')
         // Homeworks.forEach(obj => {
   
         //     userId.push(obj._id.toString());
